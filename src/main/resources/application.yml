@@ -1,0 +1,18 @@
+server:
+  address:
+  port: 8000
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  profiles:
+    active: dev
+  jackson:
+    default-property-inclusion: non_null
+
+collect:
+  urls:
+    - http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php  #酷云采集
+    - http://www.zdziyuan.com/inc/s_api_zuidam3u8.php

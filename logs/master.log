@@ -1,0 +1,459 @@
+2019-07-01 15:45:37 [main] INFO  VideoApplication - Starting VideoApplication on guiliangyindeMacBook-Pro.local with PID 18833 (/Users/guiliangyin/video/target/classes started by guiliangyin in /Users/guiliangyin/video)
+2019-07-01 15:45:37 [main] INFO  VideoApplication - The following profiles are active: dev
+2019-07-01 15:45:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
+2019-07-01 15:45:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2019-07-01 15:45:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-01 15:45:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-07-01 15:45:38 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/guiliangyin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-07-01 15:45:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-01 15:45:38 [main] DEBUG o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-01 15:45:38 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 889 ms
+2019-07-01 15:45:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-01 15:45:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-01 15:45:38 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-07-01 15:45:38 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-01 15:45:38 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-07-01 15:45:38 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 4 mappings in 'requestMappingHandlerMapping'
+2019-07-01 15:45:38 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-07-01 15:45:38 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-07-01 15:45:39 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-07-01 15:45:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2019-07-01 15:45:39 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-01 15:45:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
+2019-07-01 15:45:39 [main] INFO  VideoApplication - Started VideoApplication in 2.186 seconds (JVM running for 2.747)
+2019-07-01 15:54:31 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-01 15:54:31 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-01 15:54:31 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2019-07-01 15:54:31 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-07-01 15:54:31 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2019-07-01 15:54:31 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/video/collect", parameters={}
+2019-07-01 15:54:31 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to public org.springframework.http.ResponseEntity VideoController.collectVideo()
+2019-07-01 15:54:31 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=1&h=&ids=&wd=<<<===
+2019-07-01 15:54:38 [http-nio-8000-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5fa910f8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-07-01 15:54:43 [http-nio-8000-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@248dddd7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-07-01 15:54:48 [http-nio-8000-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2e783c2b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-07-01 15:54:53 [http-nio-8000-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43249bc3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-07-01 15:54:58 [http-nio-8000-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ecfacf6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-07-01 15:55:03 [http-nio-8000-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3cd82a4b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-07-01 15:55:03 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler public org.springframework.http.ResponseEntity RestExceptionController.badRequest(java.lang.RuntimeException)
+2019-07-01 15:55:03 [http-nio-8000-exec-1] ERROR c.d.v.c.e.RestExceptionController - Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30048ms.
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30048ms.
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:305)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at VideoServiceImpl$$EnhancerBySpringCGLIB$$71ec49a4.addVideo(<generated>)
+	at ScheduledTask.saveVideo(ScheduledTask.java:183)
+	at ScheduledTask.collectVideo(ScheduledTask.java:92)
+	at VideoController.collectVideo(VideoController.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:791)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30048ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:676)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:190)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	... 64 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2508)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:550)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:165)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	... 67 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1259)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:575)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2504)
+	... 70 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 564,055 milliseconds ago.  The last packet sent successfully to the server was 564,062 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:555)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:725)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:664)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:979)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:914)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1150)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:742)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:161)
+	... 68 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:549)
+	... 76 common frames omitted
+2019-07-01 15:55:03 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json, application/x-jackson-smile, application/cbor]
+2019-07-01 15:55:03 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["服务不可用"]
+2019-07-01 15:55:03 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30048ms.]
+2019-07-01 15:55:03 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2019-07-01 15:55:55 [Thread-7] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2019-07-01 15:55:55 [Thread-7] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-01 15:55:55 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-01 15:55:55 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-01 15:57:41 [main] INFO  VideoApplication - Starting VideoApplication on guiliangyindeMacBook-Pro.local with PID 18865 (/Users/guiliangyin/video/target/classes started by guiliangyin in /Users/guiliangyin/video)
+2019-07-01 15:57:41 [main] INFO  VideoApplication - The following profiles are active: dev
+2019-07-01 15:57:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
+2019-07-01 15:57:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2019-07-01 15:57:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-01 15:57:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-07-01 15:57:42 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/guiliangyin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-07-01 15:57:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-01 15:57:42 [main] DEBUG o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-01 15:57:42 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 974 ms
+2019-07-01 15:57:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-01 15:57:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-01 15:57:42 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-07-01 15:57:42 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-01 15:57:42 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-07-01 15:57:42 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 4 mappings in 'requestMappingHandlerMapping'
+2019-07-01 15:57:42 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-07-01 15:57:42 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-07-01 15:57:43 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-07-01 15:57:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2019-07-01 15:57:43 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-01 15:57:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
+2019-07-01 15:57:43 [main] INFO  VideoApplication - Started VideoApplication in 2.292 seconds (JVM running for 2.973)
+2019-07-01 15:57:49 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-01 15:57:49 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-01 15:57:49 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2019-07-01 15:57:49 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-07-01 15:57:49 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2019-07-01 15:57:49 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/video/collect", parameters={}
+2019-07-01 15:57:49 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to public org.springframework.http.ResponseEntity VideoController.collectVideo()
+2019-07-01 15:57:49 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=1&h=&ids=&wd=<<<===
+2019-07-01 15:57:50 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:1, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 15:57:50 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=2&h=&ids=&wd=<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:2, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=3&h=&ids=&wd=<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:3, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=4&h=&ids=&wd=<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:4, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] ERROR c.d.video.common.constant.VideoEnum - ===>>>当前未匹配的枚举值为 : 香港剧<<<===
+2019-07-01 15:57:51 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler public org.springframework.http.ResponseEntity RestExceptionController.badRequest(java.lang.RuntimeException)
+2019-07-01 15:57:51 [http-nio-8000-exec-1] ERROR c.d.v.c.e.RestExceptionController - 没有对应的枚举
+java.lang.RuntimeException: 没有对应的枚举
+	at VideoEnum.getOrderByCn(VideoEnum.java:73)
+	at ScheduledTask.lambda$saveVideo$0(ScheduledTask.java:176)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at ScheduledTask.saveVideo(ScheduledTask.java:133)
+	at ScheduledTask.collectVideo(ScheduledTask.java:124)
+	at VideoController.collectVideo(VideoController.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:791)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-01 15:57:51 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json, application/x-jackson-smile, application/cbor]
+2019-07-01 15:57:51 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["服务不可用"]
+2019-07-01 15:57:51 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: 没有对应的枚举]
+2019-07-01 15:57:51 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2019-07-01 16:00:58 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2019-07-01 16:00:58 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-01 16:00:58 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-01 16:00:58 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-01 20:00:55 [main] INFO  VideoApplication - Starting VideoApplication on guiliangyindeMacBook-Pro.local with PID 19529 (/Users/guiliangyin/video/target/classes started by guiliangyin in /Users/guiliangyin/video)
+2019-07-01 20:00:55 [main] INFO  VideoApplication - The following profiles are active: dev
+2019-07-01 20:00:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
+2019-07-01 20:00:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2019-07-01 20:00:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-01 20:00:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-07-01 20:00:56 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/guiliangyin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-07-01 20:00:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-01 20:00:56 [main] DEBUG o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-01 20:00:56 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 926 ms
+2019-07-01 20:00:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-01 20:00:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-01 20:00:57 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-07-01 20:00:57 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-01 20:00:57 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-07-01 20:00:57 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 4 mappings in 'requestMappingHandlerMapping'
+2019-07-01 20:00:57 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-07-01 20:00:57 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-07-01 20:00:57 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-07-01 20:00:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2019-07-01 20:00:57 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-01 20:00:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
+2019-07-01 20:00:57 [main] INFO  VideoApplication - Started VideoApplication in 2.361 seconds (JVM running for 2.964)
+2019-07-01 20:01:40 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-01 20:01:40 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-01 20:01:40 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2019-07-01 20:01:40 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-07-01 20:01:40 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2019-07-01 20:01:40 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/video/collect", parameters={}
+2019-07-01 20:01:40 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to public org.springframework.http.ResponseEntity VideoController.collectVideo()
+2019-07-01 20:01:40 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=1&h=&ids=&wd=<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:1, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=2&h=&ids=&wd=<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:2, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=3&h=&ids=&wd=<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:3, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=4&h=&ids=&wd=<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:4, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:42 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=5&h=&ids=&wd=<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:5, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=6&h=&ids=&wd=<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:6, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=7&h=&ids=&wd=<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:7, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=8&h=&ids=&wd=<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:8, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:43 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=9&h=&ids=&wd=<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:9, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=10&h=&ids=&wd=<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:10, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=11&h=&ids=&wd=<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:11, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=12&h=&ids=&wd=<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:12, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:44 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=13&h=&ids=&wd=<<<===
+2019-07-01 20:01:45 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:13, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:45 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=14&h=&ids=&wd=<<<===
+2019-07-01 20:01:45 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:14, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:45 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=15&h=&ids=&wd=<<<===
+2019-07-01 20:01:45 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:15, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:45 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=16&h=&ids=&wd=<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:16, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=17&h=&ids=&wd=<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:17, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=18&h=&ids=&wd=<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:18, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=19&h=&ids=&wd=<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:19, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=20&h=&ids=&wd=<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:20, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:46 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=21&h=&ids=&wd=<<<===
+2019-07-01 20:01:47 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:21, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:47 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=22&h=&ids=&wd=<<<===
+2019-07-01 20:01:47 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:22, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:47 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=23&h=&ids=&wd=<<<===
+2019-07-01 20:01:47 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:23, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:47 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=24&h=&ids=&wd=<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:24, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=25&h=&ids=&wd=<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:25, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=26&h=&ids=&wd=<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:26, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前请求地址:http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php?ac=videolist&pg=27&h=&ids=&wd=<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] INFO  c.d.video.common.task.ScheduledTask - ===>>>当前的采集平台:1, 当前采集的页码:27, 当前页面大小:20, 总页数:1588, 当前总记录数<<<===
+2019-07-01 20:01:48 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler public org.springframework.http.ResponseEntity RestExceptionController.badRequest(java.lang.RuntimeException)
+2019-07-01 20:01:48 [http-nio-8000-exec-1] ERROR c.d.v.c.e.RestExceptionController - Value out of range. Value:"366" Radix:10
+java.lang.NumberFormatException: Value out of range. Value:"366" Radix:10
+	at java.lang.Byte.parseByte(Byte.java:151)
+	at java.lang.Byte.valueOf(Byte.java:205)
+	at java.lang.Byte.valueOf(Byte.java:231)
+	at cn.hutool.core.convert.impl.NumberConverter.convertInternal(NumberConverter.java:57)
+	at cn.hutool.core.convert.impl.NumberConverter.convertInternal(NumberConverter.java:30)
+	at cn.hutool.core.convert.AbstractConverter.convert(AbstractConverter.java:56)
+	at cn.hutool.core.convert.ConverterRegistry.convert(ConverterRegistry.java:203)
+	at cn.hutool.core.convert.ConverterRegistry.convert(ConverterRegistry.java:243)
+	at cn.hutool.core.convert.Convert.convert(Convert.java:610)
+	at cn.hutool.core.convert.Convert.convert(Convert.java:596)
+	at cn.hutool.core.convert.Convert.toByte(Convert.java:114)
+	at cn.hutool.core.convert.Convert.toByte(Convert.java:126)
+	at ScheduledTask.lambda$saveVideoCn$1(ScheduledTask.java:241)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at ScheduledTask.saveVideoCn(ScheduledTask.java:195)
+	at ScheduledTask.collectVideo(ScheduledTask.java:129)
+	at VideoController.collectVideo(VideoController.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:791)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-01 20:01:48 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json, application/x-jackson-smile, application/cbor]
+2019-07-01 20:01:48 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["服务不可用"]
+2019-07-01 20:01:48 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NumberFormatException: Value out of range. Value:"366" Radix:10]
+2019-07-01 20:01:48 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2019-07-01 20:02:26 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2019-07-01 20:02:26 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-01 20:02:26 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-01 20:02:26 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

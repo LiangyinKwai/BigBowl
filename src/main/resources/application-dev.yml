@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql://120.79.11.107:3306/video?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    hikari:
+      # 是否自动提交
+      auto-commit: true
+      # 如果在没有连接可用的情况下超过此时间，则将抛出SQLException
+      connection-timeout: 30000
+      # 控制允许连接在池中空闲的最长时间
+      idle-timeout: 600000
+      # 控制池中连接的最长生命周期。使用中的连接永远不会退役，只有当它关闭时才会被删除
+      max-lifetime: 1800000
+      # 如果您的驱动程序支持JDBC4，强烈建议不要设置此属性
+      # connection-test-query:
+      # 控制HikariCP尝试在池中维护的最小空闲连接数。建议不要设置此值，而是允许HikariCP充当固定大小的连接池。 默认值：与maximumPoolSize相同
+      minimum-idle: 12
+      # 此属性控制允许池到达的最大大小，包括空闲和正在使用的连接。
+      maximum-pool-size: 12
+      connection-test-query: SELECT 1
+
+#mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: cc.deep.video.**.model
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 1
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+  configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印SqlSession过程
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+
+logging:
+  config: classpath:logback-video.xml
+  level:
+    org.springframework.web: DEBUG
+#    cc.deep: DEBUG #执行过程持久化进日志文件
+
+video:
+  log-dir: /Users/guiliangyin/video/logs
