@@ -13,10 +13,12 @@ HELP.md
 
 ### IntelliJ IDEA ###
 .idea
-.logs
 *.iws
 *.iml
+.mvn
 *.ipr
+logs
+*.log
 
 ### NetBeans ###
 /nbproject/private/

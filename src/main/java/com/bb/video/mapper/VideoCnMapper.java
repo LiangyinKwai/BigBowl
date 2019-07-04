@@ -12,4 +12,6 @@ public interface VideoCnMapper extends BaseMapper<VideoCn> {
 
     void addVideoCn(List<VideoCn> batch);
 
+    default void test() {}
+
 }
