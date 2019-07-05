@@ -21,6 +21,8 @@ spring:
       # 此属性控制允许池到达的最大大小，包括空闲和正在使用的连接。
       maximum-pool-size: 12
       connection-test-query: SELECT 1
+  application:
+    name:
 
 #mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
 mybatis-plus:
