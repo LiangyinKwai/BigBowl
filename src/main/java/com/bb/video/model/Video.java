@@ -3,6 +3,7 @@ package com.bb.video.model;
 import cn.hutool.json.JSONUtil;
 import lombok.Data;
 import java.sql.Timestamp;
+import java.util.Random;
 
 /**
  * Created by LiangyinKwai on 2019-06-10.
@@ -59,4 +60,5 @@ public class Video {
     public String toString() {
         return JSONUtil.parse(this).toString();
     }
+
 }

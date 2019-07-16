@@ -49,4 +49,8 @@ public enum LanguageEnum {
         log.error("===>>>当前未匹配的枚举值为 : {}<<<===", name);
         throw new RuntimeException("没有找到对应的枚举值");
     }
+
+    public String getName() {
+        return name;
+    }
 }

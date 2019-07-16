@@ -16,8 +16,8 @@ public class VideoApplicationTests {
 
     @Test
     public void contextLoads() {
-
-        scheduledTask.collectVideo();
+        String url = "http://www.zdziyuan.com/inc/s_api_zuidam3u8.php";
+        scheduledTask.collectTask(url);
 
     }
 

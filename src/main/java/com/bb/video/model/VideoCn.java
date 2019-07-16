@@ -15,6 +15,8 @@ public class VideoCn {
 
     private int platformId;
 
+    private int douBanId;
+
     //来源平台 1:酷云  2:最大资源
     private Byte source;
 
@@ -30,7 +32,7 @@ public class VideoCn {
     private Timestamp releaseTime;
 
     //资源的版权状态
-    private Byte state;
+    private Integer state;
 
     //资源的分辨率 字幕等说明
     private String note;

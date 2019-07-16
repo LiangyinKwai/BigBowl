@@ -14,6 +14,7 @@ import graphql.schema.idl.TypeDefinitionRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,15 +34,14 @@ public class VideoController {
     @PublicApi
     @GetMapping("page")
     public Resp findVideo() {
-        scheduledTask.collectVideo();
-
         return null;
     }
 
     @PublicApi
-    @GetMapping("collect")
-    public ResponseEntity collectVideo() {
-        scheduledTask.collectVideo();
+    @GetMapping("collect/{platNo}")
+    public ResponseEntity collectVideo(@PathVariable byte platNo) {
+        if(platNo == 1)
+        scheduledTask.collectTask("");
         return ResponseEntity.ok("采集成功");
     }
 

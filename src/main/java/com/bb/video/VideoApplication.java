@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@MapperScan("cc.deep.video.**.mapper")
+@MapperScan("com.bb.video.**.mapper")
 public class VideoApplication {
 
     public static void main(String[] args) {
