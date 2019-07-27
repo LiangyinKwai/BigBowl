@@ -1,5 +1,8 @@
 package com.bb.video.service.impl;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
+import com.bb.video.common.vo.Resp;
 import com.bb.video.mapper.VideoCnMapper;
 import com.bb.video.model.VideoCn;
 import com.bb.video.service.VideoCnService;
@@ -14,6 +17,12 @@ import java.util.List;
  */
 @Service
 public class VideoCnServiceImpl extends ServiceImpl<VideoCnMapper, VideoCn> implements VideoCnService {
+
+    @Override
+    public Resp index() {
+        Page<VideoCn> videoCnPage = selectPage(new Page<VideoCn>(), new EntityWrapper<VideoCn>().setSqlSelect("id, type_id, cover, state, release_time, note"));
+        return null;
+    }
 
     @Transactional
     @Override

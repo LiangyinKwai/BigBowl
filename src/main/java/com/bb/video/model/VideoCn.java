@@ -22,6 +22,8 @@ public class VideoCn {
 
     private String name;
 
+    private Integer typeId;
+
     private String type;
 
     private String cover;

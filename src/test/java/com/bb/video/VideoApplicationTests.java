@@ -16,9 +16,10 @@ public class VideoApplicationTests {
 
     @Test
     public void contextLoads() {
+//        String url = "http://caiji.kuyun98.com/inc/s_ldg_kkm3u8.php";
         String url = "http://www.zdziyuan.com/inc/s_api_zuidam3u8.php";
-        scheduledTask.collectTask(url);
-
+//        scheduledTask.collectTask(url);
+        scheduledTask.collectTypeTask(url);
     }
 
 }

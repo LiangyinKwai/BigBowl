@@ -2,6 +2,7 @@ package com.bb.video.controller;
 
 import com.bb.video.common.task.ScheduledTask;
 import com.bb.video.common.vo.Resp;
+import com.bb.video.service.VideoCnService;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
 import graphql.PublicApi;
@@ -30,6 +31,15 @@ public class VideoController {
 
     @Autowired
     private ScheduledTask scheduledTask;
+
+    @Autowired
+    private VideoCnService videoService;
+
+    @PublicApi
+    @GetMapping("index")
+    public Resp index() {
+        return videoService.index();
+    }
 
     @PublicApi
     @GetMapping("page")
