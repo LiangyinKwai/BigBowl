@@ -11,13 +11,11 @@ import javax.servlet.http.HttpServletResponse;
  * web拦截器
  * Created by LiangyinKwai on 2019-06-19.
  */
-@Component
 @Slf4j
 public class WebInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
         return super.preHandle(request, response, handler);
     }
 }

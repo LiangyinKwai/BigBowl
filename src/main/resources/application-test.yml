@@ -4,7 +4,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     username: bb
     password: Bb123456!
-    url: jdbc:mysql://rm-wz94v0k5t8v22t8f89o.mysql.rds.aliyuncs.com:3306/video?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://rm-wz94v0k5t8v22t8f8125010.mysql.rds.aliyuncs.com:3306/video?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
     hikari:
       # 是否自动提交
       auto-commit: true
@@ -54,4 +54,4 @@ logging:
 #    com.bb: DEBUG #执行过程持久化进日志文件
 
 video:
-  log-dir: /Users/guiliangyin/video/logs
+  log-dir: logs

@@ -1,8 +1,14 @@
 package com.bb.video.controller;
 
+import com.baomidou.mybatisplus.plugins.Page;
+import com.bb.video.common.constant.Cons;
 import com.bb.video.common.task.ScheduledTask;
 import com.bb.video.common.vo.Resp;
+import com.bb.video.model.Video;
+import com.bb.video.model.VideoCn;
 import com.bb.video.service.VideoCnService;
+import com.bb.video.vo.req.CollectVideoReq;
+import com.bb.video.vo.req.SearchVideoReq;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
 import graphql.PublicApi;
@@ -12,12 +18,15 @@ import graphql.schema.idl.RuntimeWiring;
 import graphql.schema.idl.SchemaGenerator;
 import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.sql.Timestamp;
+import java.time.Instant;
 
 import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 
@@ -25,8 +34,9 @@ import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
  * Created by LiangyinKwai on 2019-06-05.
  */
 
+@Api(description = "视频资源控制")
 @RestController
-@RequestMapping("api/v1/video")
+@RequestMapping("video")
 public class VideoController {
 
     @Autowired
@@ -34,6 +44,17 @@ public class VideoController {
 
     @Autowired
     private VideoCnService videoService;
+
+    @ApiOperation("采集视频")
+    @PostMapping("collect")
+    public Resp collectVideo(@RequestBody CollectVideoReq collectVideoReq) {
+        return videoService.collectVideo(collectVideoReq);
+    }
+
+    @GetMapping("search")
+    public Resp<Page<VideoCn>> searchVideo(@ModelAttribute SearchVideoReq searchVideoReq) {
+        return videoService.searchVideo(searchVideoReq);
+    }
 
     @PublicApi
     @GetMapping("index")
@@ -48,15 +69,12 @@ public class VideoController {
     }
 
     @PublicApi
-    @GetMapping("collect/{platNo}")
-    public ResponseEntity collectVideo(@PathVariable byte platNo) {
-        if(platNo == 1)
-        scheduledTask.collectTask("");
+    @GetMapping("collect/test/{platNo}")
+    public ResponseEntity collectVideoTest(@PathVariable byte platNo) {
         return ResponseEntity.ok("采集成功");
     }
 
     public static void main(String[] args) {
-
         String schema = "type Query{hello: String}";
 
         SchemaParser schemaParser = new SchemaParser();

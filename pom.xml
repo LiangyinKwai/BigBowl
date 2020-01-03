@@ -24,6 +24,7 @@
         <guava.version>19.0</guava.version>
         <elasticsearch.version>5.3.3</elasticsearch.version>
         <hanlp.version>portable-1.7.3</hanlp.version>
+        <swagger.version>2.7.0</swagger.version>
     </properties>
 
     <dependencies>
@@ -95,6 +96,16 @@
             <groupId>com.hankcs</groupId>
             <artifactId>hanlp</artifactId>
             <version>${hanlp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
         </dependency>
     </dependencies>
 

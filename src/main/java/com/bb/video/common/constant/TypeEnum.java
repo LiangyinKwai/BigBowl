@@ -1,9 +1,11 @@
 package com.bb.video.common.constant;
 
+import com.bb.video.mapper.TypeMapper;
+import com.bb.video.model.Type;
 import com.google.common.collect.Lists;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -125,6 +127,20 @@ public enum TypeEnum {
     private static void addVar(List<Integer> list, Integer var) {
         if(! list.contains(var))
             list.add(var);
+    }
+
+    public static List<Type> insertType() {
+        List<Type> types = Lists.newArrayList();
+        for (TypeEnum value : TypeEnum.values()) {
+            Type type = new Type();
+            type.setId(value.id);
+            type.setPid(value.pid);
+            type.setZdzyTid(value.zdzyTid);
+            type.setKuyunTid(value.kuyunTid);
+            type.setName(value.name);
+            types.add(type);
+        }
+        return types;
     }
 
 }

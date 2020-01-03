@@ -3,7 +3,6 @@ package com.bb.video.model;
 import cn.hutool.json.JSONUtil;
 import lombok.Data;
 import java.sql.Timestamp;
-import java.util.Random;
 
 /**
  * Created by LiangyinKwai on 2019-06-10.
@@ -15,22 +14,26 @@ public class Video {
 
     private int platformId;
 
+    private int douBanId;
+
     //来源平台 1:酷云  2:最大资源
     private Byte source;
 
     private String name;
 
-    private int type;
+    private Integer pid;
+
+    private Integer typeId;
 
     private String cover;
 
-    private int language;
+    private String language;
 
     //最后更新时间
     private Timestamp releaseTime;
 
     //资源的版权状态
-    private Byte state;
+    private Integer state;
 
     //资源的分辨率 字幕等说明
     private String note;
@@ -45,7 +48,7 @@ public class Video {
 
     private String description;
 
-    private Integer year;
+    private String year;
 
     private String link;
 

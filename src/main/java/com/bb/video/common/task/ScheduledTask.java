@@ -32,6 +32,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,14 +57,14 @@ public class ScheduledTask {
     @Autowired
     private VideoCnService videoCnService;
 
-    @Scheduled(cron = "0 0 2/3 * * ? ")
+//    @Scheduled(cron = "0 0 2/3 * * ? ")
     public void collector() {
         //资源地址列表
         List<String> urls = collector.getUrls();
         ThreadFactory threadFactory = new ThreadFactoryBuilder()
                 .setNameFormat("采集任务").build();
         ExecutorService executorService = Executors.newFixedThreadPool(urls.size(), threadFactory);
-        urls.forEach(url -> executorService.execute(() -> collectTask(url)));
+        urls.forEach(url -> executorService.execute(() -> collectTask(url, "")));
         boolean shutdown = executorService.isShutdown();
         log.info("线程池执行状态:{}", shutdown);
         if(shutdown)
@@ -72,11 +73,11 @@ public class ScheduledTask {
         log.info("线程池结束状态:{}", terminated ? "已终止" : "未终止");
     }
 
-    public void collectTask(String url) {
+    public void collectTask(String uri, Object h) {
         int source = 0;
-        if (url.contains("kuyun"))
+        if (uri.contains("kuyun"))
             source = 1;
-        if (url.contains("zdzy"))
+        if (uri.contains("zdzy"))
             source = 2;
         HashMap<String, Object> params = Maps.newHashMap();
         //active
@@ -86,12 +87,12 @@ public class ScheduledTask {
         //wd
         params.put("wd", "");
         //h  该参数为采集最新的时间段    24为采集最新的一天的    168为采集最新一周的    为空则采集全部的
-        params.put("h", "");
+        params.put("h", h);
         //记录页码
         int pg = 1;
         params.put("pg", pg);
         String paramsStr = HttpUtil.toParams(params, CharsetUtil.CHARSET_UTF_8);
-        url = url + "?" + paramsStr;
+        String url = uri + "?" + paramsStr;
         log.info("===>>>当前请求地址:{}<<<===", url);
         Document doc = null;
         try {
@@ -115,12 +116,12 @@ public class ScheduledTask {
         String recordcount = listEle.attr("recordcount");
         //视频集合
         Elements videoEles = listEle.select("video");
-        saveVideoCn(videoEles);
+        saveVideo(videoEles);
         log.info("===>>>当前的采集平台:{}, 当前采集的页码:{}, 当前页面大小:{}, 总页数:{}, 当前总记录数:{}<<<===", source, page, pagesize, pagecount, recordcount);
         while (pg < Convert.toInt(pagecount)) {
             params.put("pg", ++pg);
             paramsStr = HttpUtil.toParams(params, CharsetUtil.CHARSET_UTF_8);
-            url = url + "?" + paramsStr;
+            url = uri + "?" + paramsStr;
             log.info("===>>>当前请求地址:{}<<<===", url);
             try {
                 doc = Jsoup.connect(url).get();
@@ -145,7 +146,7 @@ public class ScheduledTask {
             pagecount = listEle.attr("pagecount");
 
             log.info("===>>>当前的采集平台:{}, 当前采集的页码:{}, 当前页面大小:{}, 总页数:{}, 当前总记录数:{}<<<===", source, page, pagesize, pagecount, recordcount);
-
+//            saveVideo(videoEles);
             saveVideoCn(videoEles);
         }
     }
@@ -168,14 +169,32 @@ public class ScheduledTask {
             //语言
             String language = videoEle.getElementsByTag("lang").text();
             //区域
-            String area;
-            if(language.equals("韩语"))
-                area = "韩国";
-            else if(language.equals("国语"))
-                area = "大陆";
-            else
-                area = videoEle.textNodes().get(0).text();
-//                String area = videoEle.getElementsByTag("area").text();
+            String area = "";
+            if (videoEle.getElementsByTag("area") != null) {
+
+                if (language.equals(LanguageEnum.KOA.getName()))
+                    area = "韩国";
+                /*else if (language.equals(LanguageEnum.CHN.getName()))
+                    area = "大陆";*/
+                else if (language.equals(LanguageEnum.YUE.getName()) && type.equals("香港剧"))
+                    area = "香港";
+                /*else if (language.equals(LanguageEnum.ENG.getName()))
+                    area = "欧美";*/
+                else {
+                    int size = videoEle.textNodes().size();
+                    if (size > 0)
+                        area = videoEle.textNodes().get(0).text();
+                    else
+                        area = "其他";
+                }
+
+            }
+            if (StrUtil.isEmpty(language)) {
+                if (area.equals("香港"))
+                    language = "粤语";
+                else if (area.equals("美国"))
+                    language = "英语";
+            }
             //年份
             String year = videoEle.getElementsByTag("year").text();
             //对应资源的状态   example是否收到侵权律师函
@@ -188,6 +207,9 @@ public class ScheduledTask {
             String director = videoEle.getElementsByTag("director").text();
             //描述
             String description = videoEle.getElementsByTag("des").text();
+            if(description.length() > 5000 && description.contains("\">"))
+                description = description.substring(description.lastIndexOf("\">") + 2);
+//            log.info("=>>>当前的描述长度:{},内容:{}", description.length(), description);
             //链接
             Elements ddEle = videoEle.getElementsByTag("dd");
             String flag = ddEle.attr("flag");
@@ -199,15 +221,16 @@ public class ScheduledTask {
             video.setDescription(description);
             video.setCover(cover);
             video.setDirector(director);
-            video.setLanguage(LanguageEnum.getOrderByName(language));
+            video.setLanguage(language);
             video.setArea(area);
             video.setName(name);
-            video.setYear(Convert.toInt(year));
-            video.setType(VideoEnum.getOrderByCn(type));
+            video.setYear(year);
+            video.setTypeId(VideoEnum.getOrderByCn(type));
             video.setLink(link);
             video.setNote(note);
-            video.setState(Convert.toByte(state));
+            video.setState(Convert.toInt(state));
             video.setSource(PlatformEnum.getOrderByName(flag));
+            video.setCreated(Timestamp.from(Instant.now()));
             videos.add(video);
         });
         videoService.addVideo(videos);
@@ -216,7 +239,7 @@ public class ScheduledTask {
     private void saveVideoCn(Elements videoEles) {
         ArrayList<VideoCn> videos = Lists.newArrayList();
         //更新时间
-//            String last = element.getElementsByTag("last").get(0).text();
+//            String last = element.getElementsByTag("last")wq1``12wqe3243werreedssaaw.get(0).text();
         for (Element videoEle : videoEles) {//最后更新时间
             String last = videoEle.getElementsByTag("last").text();
             //平台id
@@ -291,12 +314,13 @@ public class ScheduledTask {
             video.setArea(area);
             video.setName(name);
             video.setYear(year);
-//            video.setType(type);
+            video.setType(type);
             video.setLink(link);
             video.setNote(note);
             video.setState(Convert.toInt(state));
             video.setSource(PlatformEnum.getOrderByName(flag));
             videos.add(video);
+            log.info("当前视频的名称:{},link长度:{}", name, link.length());
         }
         videoCnService.addVideoCn(videos);
     }
